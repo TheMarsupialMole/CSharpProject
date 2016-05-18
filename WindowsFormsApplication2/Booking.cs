@@ -9,5 +9,6 @@ namespace WindowsFormsApplication2
     class Booking
     {
         // Den grymmaste kommentaren någonsin!
+        // Tetar igen
     }
 }
