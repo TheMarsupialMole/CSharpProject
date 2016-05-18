@@ -8,5 +8,6 @@ namespace WindowsFormsApplication2
 {
     class Booking
     {
+        // Här en en riktigt bra kommentar som jag skrivit
     }
 }
