@@ -9,6 +9,6 @@ namespace WindowsFormsApplication2
 {
     class DbHandler
     {
-        //to 
+        //här kommer härliga selectsatser synas som små mysiga gosedjur
     }
 }
