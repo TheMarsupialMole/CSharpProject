@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="f0a579a5-4ea8-4a3c-abf1-ce792a1511d0" name="Activity1" linkedPackageId="24654971-859e-459b-89e0-46f25baa1b5f" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="a54815ff-5048-46fa-b007-1792fc593609">
+      <elementDefinition Id="a912d085-e246-42da-8362-190668411640" />
+      <body>Does a phone number exist?
+</body>
+    </comment>
+    <comment Id="73ae1893-4b52-415a-a810-6e83e7c89d46">
+      <elementDefinition Id="317d50b8-243b-4399-a0cc-9c7136df7024" />
+      <body>Client connected?
+</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="2fa412e9-56b4-4398-b050-d489f3124211" LastKnownName="Decision3" />
+      </annotatedElements>
+    </comment>
+    <comment Id="5f860a5d-dfcc-46a8-bd25-2f63bd63c8d2">
+      <elementDefinition Id="3afb92a0-ffb3-4fb5-9b96-d4403eab0102" />
+      <body>Embedded System
+</body>
+    </comment>
+    <comment Id="14f5c587-04b2-4cd4-8399-9da40fc6f99b">
+      <elementDefinition Id="8d11b852-ce05-44ce-96ed-afe9fbd6c5f2" />
+      <body>Android Application</body>
+    </comment>
+    <comment Id="7c918814-2321-4983-8b26-5d563c31ec03">
+      <elementDefinition Id="aa2b81a8-221b-47db-aec5-9ecd71c5519c" />
+      <body>Has an SMS arrived?</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="bafdb3db-6f19-49ba-b2af-c52bc22d522d" LastKnownName="Decision1" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="b74a1e4f-2703-4adb-bf01-0b08a5c6b2c2">
+      <profileInstance Id="899d3688-739e-47a9-9ab2-617f16d69b64" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="00cba75a-3d66-4928-b9ed-811a6a5214e4">
+      <profileInstance Id="6e442fe1-9f01-4d37-8469-3132732aac11" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="cd165bf9-b5c7-449d-a520-9bae69cdd066" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="3f0dd47f-1e90-4c95-a89d-0997803d1bc1" />
+        <nodes>
+          <initialNode Id="bb8dad8a-23ec-4b49-ba25-1cf0db6c5df0" name="Initial1" isLeaf="false">
+            <elementDefinition Id="50d86dd9-b9a5-49b9-8d23-f36a62306cc1" />
+            <flowNodeTargets>
+              <controlFlow Id="bb653a3c-ab1b-420b-8482-9c064270172c" isLeaf="false">
+                <opaqueActionMoniker Id="8370d1ad-b477-40f5-b657-3e6255a07387" LastKnownName="User presses connect button" />
+                <elementDefinition Id="90150f7e-8c52-41b3-851f-0e6d437a3fe2" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="8370d1ad-b477-40f5-b657-3e6255a07387" name="User presses connect button" isLeaf="false">
+            <elementDefinition Id="0743ddbb-67cb-4aa4-9bb3-19d2343cd541" />
+            <flowNodeTargets>
+              <controlFlow Id="29c16716-1a5f-4d8a-a358-178b8ec2e6c8" isLeaf="false">
+                <decisionNodeMoniker Id="cadf7414-4583-4124-bed0-f2379e209286" LastKnownName="Decision2" />
+                <elementDefinition Id="66fd358e-a3c1-4899-9e3b-ab14ea8cdc5d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="25ec5c81-e186-4d96-9c93-7fbdf746eebe" name="Wait for SMS" isLeaf="false">
+            <elementDefinition Id="ebae26e4-5ad6-4aa8-8bd5-b89238781166" />
+            <flowNodeTargets>
+              <controlFlow Id="e42e998a-4025-41aa-88e6-b2aad13cb844" isLeaf="false">
+                <decisionNodeMoniker Id="bafdb3db-6f19-49ba-b2af-c52bc22d522d" LastKnownName="Decision1" />
+                <elementDefinition Id="938c7240-0e2f-49ad-a3b3-0b8cb7392ba3" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="bafdb3db-6f19-49ba-b2af-c52bc22d522d" name="Decision1" isLeaf="false">
+            <elementDefinition Id="224fd820-fee3-4516-87d8-83480b7e594e" />
+            <flowNodeTargets>
+              <controlFlow Id="3ac146ab-2e5f-4a2f-93d9-747c953aa592" guard="No" isLeaf="false">
+                <opaqueActionMoniker Id="25ec5c81-e186-4d96-9c93-7fbdf746eebe" LastKnownName="Wait for SMS" />
+                <elementDefinition Id="7c4dca43-3009-4fd2-ac76-250406b75385" />
+              </controlFlow>
+              <controlFlow Id="7828acb5-efe9-4a11-90df-75273bc36305" isLeaf="false">
+                <opaqueActionMoniker Id="1e097ed9-636d-4605-840d-ea8a00b018df" LastKnownName="Start client connection with application" />
+                <elementDefinition Id="20458491-d229-4b16-8876-eee5cbbdf52a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="9a3ef402-a79c-413c-b5e2-e5c4d27f8c7c" name="Send SMS containing local IP-adress to embedded system" isLeaf="false">
+            <elementDefinition Id="028b7f3f-946c-455b-b766-831373e1c18b" />
+            <flowNodeTargets>
+              <controlFlow Id="b7b67c47-6f0f-4cf0-922e-4e92a09797d6" isLeaf="false">
+                <opaqueActionMoniker Id="25ec5c81-e186-4d96-9c93-7fbdf746eebe" LastKnownName="Wait for SMS" />
+                <elementDefinition Id="5b4710e8-ffaf-4d5f-9e1c-6899935c8dc9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="13662c19-325a-471f-af34-750591f14f49" name="Start Server Socket" isLeaf="false">
+            <elementDefinition Id="ba690ec5-2e31-498a-bd20-018d6a988461" />
+            <flowNodeTargets>
+              <controlFlow Id="340f524e-f5c9-40c5-865b-f9adac3c3b19" isLeaf="false">
+                <opaqueActionMoniker Id="fc6dd6d4-7f75-4540-9fdb-d54cc03c8db2" LastKnownName="Wait for client to connect" />
+                <elementDefinition Id="a8299b91-6c22-4540-a671-cb5260ddaa3c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode Id="f3777fde-2722-4818-a18c-8fd2e62bae08" name="Fork1" isLeaf="false">
+            <elementDefinition Id="24c3c6fb-3bb6-435d-8b47-8b7d41fb89ca" />
+            <flowNodeTargets>
+              <controlFlow Id="256fa82b-046f-4153-9c82-916bc76d0882" isLeaf="false">
+                <opaqueActionMoniker Id="13662c19-325a-471f-af34-750591f14f49" LastKnownName="Start Server Socket" />
+                <elementDefinition Id="e206f066-33be-4b97-97a5-24fbb1bff1f8" />
+              </controlFlow>
+              <controlFlow Id="17a42756-1030-4b2d-b5fe-85f87ea36317" isLeaf="false">
+                <opaqueActionMoniker Id="9a3ef402-a79c-413c-b5e2-e5c4d27f8c7c" LastKnownName="Send SMS containing local IP-adress to embedded system" />
+                <elementDefinition Id="f30ab349-31b5-4eb0-be43-427e241ef837" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction Id="6ba62233-72e4-46f2-8c38-df4b13eed77e" name="Enter number to embedded system" isLeaf="false">
+            <elementDefinition Id="a7b12e98-01aa-4042-852c-712412258f59" />
+            <flowNodeTargets>
+              <controlFlow Id="87506251-fa69-4306-92b7-bbb6e06502ef" isLeaf="false">
+                <joinNodeMoniker Id="86a2dd46-a63c-4e47-8b42-9e8e62a4dffb" LastKnownName="Join1" />
+                <elementDefinition Id="6287cc9a-1389-4ff9-8a32-19ff46c6c15d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="cadf7414-4583-4124-bed0-f2379e209286" name="Decision2" isLeaf="false">
+            <elementDefinition Id="e1c242f3-6268-40d1-8c97-d3ecd27d249e" />
+            <flowNodeTargets>
+              <controlFlow Id="1972a2f5-46a6-4d94-844f-a72ddcb5d6a0" guard="No" isLeaf="false">
+                <opaqueActionMoniker Id="6ba62233-72e4-46f2-8c38-df4b13eed77e" LastKnownName="Enter number to embedded system" />
+                <elementDefinition Id="a9244df0-970b-4e69-859b-cc324ec50848" />
+              </controlFlow>
+              <controlFlow Id="8ec5b434-39a0-4bae-997e-2d85e408992b" isLeaf="false">
+                <joinNodeMoniker Id="86a2dd46-a63c-4e47-8b42-9e8e62a4dffb" LastKnownName="Join1" />
+                <elementDefinition Id="6225f038-15a2-4875-9983-24d8517fd95a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <joinNode Id="86a2dd46-a63c-4e47-8b42-9e8e62a4dffb" name="Join1" isLeaf="false">
+            <elementDefinition Id="f14880eb-deba-4931-a327-45f48f103db7" />
+            <flowNodeTargets>
+              <controlFlow Id="9e41ee5f-d137-462f-a9dd-5b139ad6c8ec" isLeaf="false">
+                <forkNodeMoniker Id="f3777fde-2722-4818-a18c-8fd2e62bae08" LastKnownName="Fork1" />
+                <elementDefinition Id="8b1ac6fc-bfd3-4012-84e1-bedaf7794490" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <opaqueAction Id="fc6dd6d4-7f75-4540-9fdb-d54cc03c8db2" name="Wait for client to connect" isLeaf="false">
+            <elementDefinition Id="cd9f30ce-6043-4c36-be0d-228171bb3ea1" />
+            <flowNodeTargets>
+              <controlFlow Id="90f51729-7374-4f11-b4b1-2e9f676ddab2" isLeaf="false">
+                <decisionNodeMoniker Id="2fa412e9-56b4-4398-b050-d489f3124211" LastKnownName="Decision3" />
+                <elementDefinition Id="e4d23ab8-e9e7-42af-a0c3-f0bbfca7a539" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="2fa412e9-56b4-4398-b050-d489f3124211" name="Decision3" isLeaf="false">
+            <elementDefinition Id="0c07af4c-7473-4b62-a1df-6f9d4d8448ef" />
+            <flowNodeTargets>
+              <controlFlow Id="3a906ce8-2a51-4298-8e85-485e0ab45dd8" guard="No" isLeaf="false">
+                <opaqueActionMoniker Id="fc6dd6d4-7f75-4540-9fdb-d54cc03c8db2" LastKnownName="Wait for client to connect" />
+                <elementDefinition Id="bfc67a64-10c4-4c4b-bdbc-16bb705dfc99" />
+              </controlFlow>
+              <controlFlow Id="dcb850d7-1464-4420-abcd-8d4545c11b9d" isLeaf="false">
+                <activityFinalNodeMoniker Id="02ad87af-c77c-4c47-9687-a2f7211d4cb0" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="26530186-bf3b-4e6f-b8f9-286eb0b3cd71" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="1e097ed9-636d-4605-840d-ea8a00b018df" name="Start client connection with application" isLeaf="false">
+            <elementDefinition Id="f71b7bae-0b5a-4fec-842a-a04a80506884" />
+            <flowNodeTargets>
+              <controlFlow Id="04fe4b6c-c21b-4e87-bf65-54c1d915e745" isLeaf="false">
+                <opaqueActionMoniker Id="fc6dd6d4-7f75-4540-9fdb-d54cc03c8db2" LastKnownName="Wait for client to connect" />
+                <elementDefinition Id="46e9f2ba-4705-4521-a65b-fb300f4d0dec" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="02ad87af-c77c-4c47-9687-a2f7211d4cb0" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="1f559a98-536a-4471-87e2-846c78997872" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="24654971-859e-459b-89e0-46f25baa1b5f" name="ModelingProject1">
+    <elementDefinition Id="bc70a7ea-6c30-4d4d-b006-ac3b9f3a0d2e" />
+  </package>
+</activityRootModel>
