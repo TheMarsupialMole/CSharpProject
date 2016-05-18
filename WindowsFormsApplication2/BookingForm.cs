@@ -15,7 +15,11 @@ namespace WindowsFormsApplication2
         public BookingForm()
         {
             InitializeComponent();
-            Console.Write("test");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

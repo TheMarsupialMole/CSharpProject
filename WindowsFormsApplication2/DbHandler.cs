@@ -9,6 +9,6 @@ namespace WindowsFormsApplication2
 {
     class DbHandler
     {
-        SqlConnection sqlCon = new SqlConnection()
+        //to 
     }
 }
